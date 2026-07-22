@@ -1,0 +1,2 @@
+Model	Replicate	log-likelihood	theta	sfs_sum	chi-squared
+sc_sym_mig	1	-442.21	175.08	1104.17	502.49

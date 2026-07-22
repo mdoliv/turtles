@@ -1,0 +1,19 @@
+description: Symmetric migration between Cc and Ei
+time_units: generations
+demes:
+  - name: Ancestral
+    epochs:
+      - start_size: 59445.8175992422
+        end_time: 1020715.44861469
+  - name: Cc
+    ancestors: [Ancestral]
+    epochs:
+      - start_size: 30808.3071284172
+  - name: Ei
+    ancestors: [Ancestral]
+    epochs:
+      - start_size: 80623.319284213
+migrations:
+  - demes: [Cc, Ei]
+    rate: 9.93666982189951e-07
+    start_time: 44866.1115356277

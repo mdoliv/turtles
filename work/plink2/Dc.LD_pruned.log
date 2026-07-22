@@ -1,0 +1,29 @@
+PLINK v2.0.0-a.6.26LM 64-bit Intel (26 Oct 2025)
+Options in effect:
+  --export vcf bgz
+  --extract Dc.LD_pruned.prune.in
+  --out Dc.LD_pruned
+  --set-missing-var-ids @:#
+  --vcf ../bcftools/Biallelic.dc.vcf.gz
+
+Hostname: darwin
+Working directory: /home/maycon/projects/turtles/work/plink2
+Start time: Wed Mar 25 11:11:59 2026
+
+Random number seed: 1774447919
+256834 MiB RAM detected, ~23281 available; reserving 23217 MiB for main
+workspace.
+Using up to 160 threads (change this with --threads).
+--vcf: 192765 variants scanned.
+--vcf: Dc.LD_pruned-temporary.pgen + Dc.LD_pruned-temporary.pvar.zst +
+Dc.LD_pruned-temporary.psam written.
+169 samples (0 females, 0 males, 169 ambiguous; 169 founders) loaded from
+Dc.LD_pruned-temporary.psam.
+Note: 28 nonstandard chromosome codes present.
+192765 variants loaded from Dc.LD_pruned-temporary.pvar.zst.
+Note: No phenotype data present.
+--extract: 19978 variants remaining.
+19978 variants remaining after main filters.
+--export vcf bgz to Dc.LD_pruned.vcf.gz ... done.
+
+End time: Wed Mar 25 11:12:06 2026

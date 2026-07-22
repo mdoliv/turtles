@@ -1,0 +1,48 @@
+# Misc
+Snakefile*
+
+# Directories with large files
+data/ref
+data/reads
+NE1_50M_SR_W
+src
+scripts
+config
+work/easysfs/easySFS
+work/easysfs/sfs_all
+work/easysfs/sfs_thinned
+work/fastp
+work/het
+work/mapped
+work/stacks/rCarCar1.hap1
+work/stacks/rCheMyd1.pri.v2
+work/stacks/rDerCor1.pri.v4
+work/stacks/rEreImb1.hap1
+work/stacks/rLepKem1.hap1
+work/stacks/rLepOli2.hap1
+work/stacks/rNatDep2.hap1
+
+# Large files
+*.bcf
+*.vcf
+*.gz
+*.tbi
+*.csi
+*.bam
+work/bcftools/All.no_repeats.raw.bed
+work/overlap/ddRAD.depth_filtered.bed
+work/overlap/3RAD.depth_filtered.bed
+work/overlap/sites.ddRAD_only.bed
+work/overlap/sites.intersect.bed
+work/overlap/sites.3RAD_only.bed 
+
+# Staging directories
+.snakemake
+.venv
+__pycache__
+
+# Logs
+logs
+
+# Hidden files
+.Rhistory

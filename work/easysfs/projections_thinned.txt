@@ -1,0 +1,27 @@
+
+  Processing 4 populations - ['Cm', 'Ei', 'Cc', 'Lo']
+
+Samples in pops file not present in VCF: 
+Samples in VCF not present in pops file: T175BACDSEI, T166SEPIREI, T092BASANEI, T119BAPDFNA, T199SAERGCC, T099BAABRNA, T184BAABPEI, T250BAABPCC, T151BAPDFEI, T177BAABPEI, T093BAPDFEI, T100BAABRNA, T225SPUBTCC, T244SEPIRAD, T121BAPDFNA, T152BAPDFEI, T208SAERGCC, T216SAERGCC, T182BAABPEI, T200SAERGCC, T231SEPIRCC, T181BAABPEI, T203SAERGCC, T150BAPDFEI, T122BAPDFNA, T117BAPDFNA, T091BAABPEI, T168SEPIREI, T108BAABRNA, T207SAERGCC, T197SAERGCC, T221SAERGCC, T110BAABRNA, T243SEPIRAD, T159BAABPEI, T118BAPDFNA, T123BAPDFNA, T220SAERGCC, T196BAPDFEI, T251SEPDMAD, T183BAABPEI, T201SAERGCC, T237SEPIRCC, T137BAPDFEI, T180BAABPEI, T109BAABRNA, T161BAABPEI, T176BAABPEI, T155BAABPEI, T202SAERGCC, T160BAABPEI, T169SEPIREI, T232SEPIRAD, T214SAERGCC, T178BAABPEI, T157BAABPEI, T156BAABPEI, T136BAPDFEI, T224SAERGCC, T101BAABRNA, T120BAPDFNA, T205SAERGCC, T124BAPDFNA, T210SAERGCC
+Continuing with samples present in both pops file and VCF.
+
+    Running preview mode. We will print out the results for # of segregating sites
+    for multiple values of projecting down for each population. The dadi
+    manual recommends maximizing the # of seg sites for projections, but also
+    a balance must be struck between # of seg sites and sample size.
+
+    For each population you should choose the value of the projection that looks
+    best and then rerun easySFS with the `--proj` flag.
+    
+Cm
+(2, 333)	(3, 465)	(4, 570)	(5, 632)	(6, 698)	(7, 731)	(8, 780)	(9, 789)	(10, 827)	(11, 809)	(12, 838)	(13, 689)	(14, 708)	
+
+Ei
+(2, 125)	(3, 188)	(4, 231)	(5, 265)	(6, 293)	(7, 317)	(8, 338)	(9, 356)	(10, 373)	(11, 388)	(12, 402)	(13, 415)	(14, 427)	(15, 438)	(16, 448)	(17, 458)	(18, 467)	(19, 475)	(20, 483)	(21, 491)	(22, 499)	(23, 506)	(24, 513)	(25, 520)	(26, 526)	(27, 531)	(28, 537)	(29, 543)	(30, 549)	(31, 554)	(32, 560)	(33, 565)	(34, 570)	(35, 573)	(36, 578)	(37, 583)	(38, 587)	(39, 591)	(40, 595)	(41, 598)	(42, 602)	(43, 603)	(44, 607)	(45, 609)	(46, 612)	(47, 613)	(48, 616)	(49, 618)	(50, 621)	(51, 619)	(52, 622)	(53, 613)	(54, 616)	(55, 612)	(56, 615)	(57, 606)	(58, 609)	(59, 605)	(60, 607)	(61, 594)	(62, 596)	(63, 592)	(64, 594)	(65, 574)	(66, 576)	(67, 554)	(68, 556)	(69, 518)	(70, 520)	(71, 446)	(72, 448)	(73, 319)	(74, 320)	
+
+Cc
+(2, 65)	(3, 98)	(4, 120)	(5, 136)	(6, 150)	(7, 161)	(8, 172)	(9, 181)	(10, 189)	(11, 196)	(12, 203)	(13, 209)	(14, 215)	(15, 221)	(16, 226)	(17, 231)	(18, 236)	(19, 240)	(20, 244)	(21, 249)	(22, 253)	(23, 256)	(24, 260)	(25, 264)	(26, 267)	(27, 271)	(28, 274)	(29, 277)	(30, 280)	(31, 283)	(32, 286)	(33, 289)	(34, 292)	(35, 295)	(36, 298)	(37, 300)	(38, 303)	(39, 305)	(40, 308)	(41, 310)	(42, 313)	(43, 315)	(44, 318)	(45, 320)	(46, 322)	(47, 325)	(48, 327)	(49, 329)	(50, 331)	(51, 333)	(52, 336)	(53, 338)	(54, 340)	(55, 342)	(56, 344)	(57, 346)	(58, 348)	(59, 349)	(60, 351)	(61, 352)	(62, 354)	(63, 355)	(64, 356)	(65, 358)	(66, 360)	(67, 359)	(68, 361)	(69, 362)	(70, 364)	(71, 365)	(72, 367)	(73, 366)	(74, 368)	(75, 369)	(76, 370)	(77, 372)	(78, 374)	(79, 372)	(80, 374)	(81, 374)	(82, 375)	(83, 372)	(84, 373)	(85, 371)	(86, 372)	(87, 368)	(88, 369)	(89, 362)	(90, 363)	(91, 357)	(92, 358)	(93, 351)	(94, 352)	(95, 330)	(96, 332)	(97, 317)	(98, 318)	(99, 284)	(100, 285)	(101, 248)	(102, 249)	(103, 214)	(104, 215)	(105, 171)	(106, 171)	
+
+Lo
+(2, 71)	(3, 100)	(4, 121)	(5, 130)	(6, 141)	(7, 147)	(8, 154)	(9, 145)	(10, 150)	(11, 128)	(12, 132)	
+

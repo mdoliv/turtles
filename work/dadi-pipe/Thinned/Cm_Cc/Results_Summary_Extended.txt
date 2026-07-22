@@ -1,0 +1,16 @@
+Model	Replicate	log-likelihood	AIC	chi-squared	theta	optimized_params
+no_mig	Round_4_Replicate_1	-455.6	917.2	1379.36	724.06	0.1532,0.0576,0.1811	
+no_mig	Round_4_Replicate_4	-457.0	920.0	1231.61	745.74	0.1339,0.053,0.1565	
+no_mig	Round_4_Replicate_3	-457.31	920.62	1208.93	743.19	0.1346,0.053,0.1551	
+no_mig	Round_3_Replicate_1	-460.39	926.78	1617.28	696.9	0.1808,0.059,0.204	
+no_mig	Round_4_Replicate_2	-460.57	927.14	1573.25	651.54	0.2128,0.0748,0.2469	
+sec_contact_sym_mig	Round_4_Replicate_4	-305.52	621.04	263.58	174.72	1.0437,0.2038,0.0787,0.0876,6.9345	
+sec_contact_sym_mig	Round_4_Replicate_1	-305.99	621.98	257.29	170.88	1.0126,0.203,0.0851,0.1197,8.086	
+sec_contact_sym_mig	Round_4_Replicate_5	-306.18	622.36	258.65	381.28	0.4511,0.0897,0.1906,0.5261,2.2525	
+sec_contact_sym_mig	Round_4_Replicate_4	-307.42	624.84	265.94	592.67	0.3034,0.0568,0.2845,0.122,0.9411	
+sec_contact_sym_mig	Round_4_Replicate_3	-308.76	627.52	261.99	634.3	0.2572,0.0508,0.3461,0.1165,1.231	
+sym_mig	Round_4_Replicate_2	-306.15	620.3	255.89	193.27	0.9439,0.1936,0.0914,6.2853	
+sym_mig	Round_4_Replicate_3	-306.35	620.7	265.48	209.26	0.8799,0.1856,0.0887,5.2639	
+sym_mig	Round_4_Replicate_5	-307.03	622.06	266.55	145.66	1.3304,0.2466,0.0646,8.0754	
+sym_mig	Round_3_Replicate_1	-307.31	622.62	260.85	176.89	0.979,0.1828,0.0937,8.5736	
+sym_mig	Round_4_Replicate_5	-309.13	626.26	276.02	610.98	0.2824,0.0625,0.2511,0.8844	

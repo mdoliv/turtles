@@ -1,0 +1,29 @@
+PLINK v2.0.0-a.6.26LM 64-bit Intel (26 Oct 2025)
+Options in effect:
+  --make-king-table
+  --out Biallelic.MN10.MX100.MS80.MQ20
+  --vcf ../bcftools/Biallelic.MN10.MX100.MS80.MQ20.vcf.gz
+
+Hostname: darwin
+Working directory: /home/maycon/projects/turtles/work/kinship
+Start time: Tue Jun 23 15:16:53 2026
+
+Random number seed: 1782238613
+256834 MiB RAM detected, ~190382 available; reserving 128417 MiB for main
+workspace.
+Using up to 160 threads (change this with --threads).
+--vcf: 193233 variants scanned.
+--vcf: Biallelic.MN10.MX100.MS80.MQ20-temporary.pgen +
+Biallelic.MN10.MX100.MS80.MQ20-temporary.pvar.zst +
+Biallelic.MN10.MX100.MS80.MQ20-temporary.psam written.
+167 samples (0 females, 0 males, 167 ambiguous; 167 founders) loaded from
+Biallelic.MN10.MX100.MS80.MQ20-temporary.psam.
+Note: 28 nonstandard chromosome codes present.
+193233 variants loaded from Biallelic.MN10.MX100.MS80.MQ20-temporary.pvar.zst.
+Note: No phenotype data present.
+--make-king-table pass 1/1: Scanning for rare variants... done.
+35269 variants handled by initial scan (157964 remaining).
+--make-king-table: 193233 variants processed.
+Results written to Biallelic.MN10.MX100.MS80.MQ20.kin0 .
+
+End time: Tue Jun 23 15:16:55 2026

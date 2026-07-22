@@ -1,0 +1,7 @@
+branch	branch_descendants	Outgroup	Cm	Ei	Cc	Lo
+b2	Ei,Cc,Lo	nan	nan	nan	nan	nan
+b3	Cm	nan	nan	nan	nan	nan
+b4	Cc,Lo	nan	0	nan	nan	nan
+b5	Ei	nan	0.00244913	nan	nan	nan
+b6	Cc	nan	0	0.0164947	nan	nan
+b7	Lo	nan	0	0	nan	nan

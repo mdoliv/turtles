@@ -1,0 +1,31 @@
+PLINK v2.0.0-a.6.26LM 64-bit Intel (26 Oct 2025)
+Options in effect:
+  --allow-extra-chr
+  --export vcf bgz
+  --extract LD_pruned.MN10.MX100.MS80.MQ20.prune.in
+  --out LD_pruned.MN10.MX100.MS80.MQ20
+  --set-missing-var-ids @:#
+  --vcf ../bcftools/Biallelic.MN10.MX100.MS80.MQ20.vcf.gz
+
+Hostname: darwin
+Working directory: /home/maycon/projects/turtles/work/plink2
+Start time: Fri Feb 27 14:23:44 2026
+
+Random number seed: 1772213024
+256834 MiB RAM detected, ~98925 available; reserving 98861 MiB for main
+workspace.
+Using up to 160 threads (change this with --threads).
+--vcf: 193233 variants scanned.
+--vcf: LD_pruned.MN10.MX100.MS80.MQ20-temporary.pgen +
+LD_pruned.MN10.MX100.MS80.MQ20-temporary.pvar.zst +
+LD_pruned.MN10.MX100.MS80.MQ20-temporary.psam written.
+167 samples (0 females, 0 males, 167 ambiguous; 167 founders) loaded from
+LD_pruned.MN10.MX100.MS80.MQ20-temporary.psam.
+Note: 28 nonstandard chromosome codes present.
+193233 variants loaded from LD_pruned.MN10.MX100.MS80.MQ20-temporary.pvar.zst.
+Note: No phenotype data present.
+--extract: 20675 variants remaining.
+20675 variants remaining after main filters.
+--export vcf bgz to LD_pruned.MN10.MX100.MS80.MQ20.vcf.gz ... done.
+
+End time: Fri Feb 27 14:23:46 2026

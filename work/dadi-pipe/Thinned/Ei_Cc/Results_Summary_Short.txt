@@ -1,0 +1,4 @@
+Model	Replicate	log-likelihood	AIC	chi-squared	theta	optimized_params
+sec_contact_sym_mig	Round_4_Replicate_5	-442.21	894.42	502.24	175.09	0.4881,0.2716,0.2738,2.427,0.0653	
+sym_mig	Round_4_Replicate_3	-465.89	939.78	361.33	268.53	0.2835,0.1388,0.2546,4.278	
+no_mig	Round_4_Replicate_3	-856.29	1718.58	10410.12	449.37	0.1254,0.0801,0.1504	

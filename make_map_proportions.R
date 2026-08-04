@@ -27,7 +27,33 @@ scatterpie_data <- sample_meta |>
       previous_molecular_id %in% c("cc", "ei", "cm", "lo") ~ "Pure",
       previous_molecular_id == "admixed" ~ "Hybrid",
       .default = "Not identified"
-    )
+    ),
+    lat = state |>
+      recode_values(
+        "Pernambuco" ~ -8.05,
+        "Rio Grande do Norte" ~ -5.74,
+        "Espírito Santo" ~ -20.34,
+        "Bahia" ~ -12.89,
+        "Sergipe" ~ -10.92,
+        "French Guiana" ~ 4.94,
+        "Rio de Janeiro" ~ -22.88,
+        "Southeast Atlantic" ~ -30.95,
+        "Martinique" ~ 14.83,
+        "São Paulo" ~ -23.95
+      ),
+    lon = state |>
+      recode_values(
+        "Pernambuco" ~ -34.89,
+        "Rio Grande do Norte" ~ -35.11,
+        "Espírito Santo" ~ -40.34,
+        "Bahia" ~ -38.50,
+        "Sergipe" ~ -37.07,
+        "French Guiana" ~ -52.35,
+        "Rio de Janeiro" ~ -43.17,
+        "Southeast Atlantic" ~ -35.01,
+        "Martinique" ~ -61.05,
+        "São Paulo" ~ -46.33
+      )
   ) |>
   group_by(type, lat, lon) |>
   summarise(count = n()) |>
@@ -55,8 +81,10 @@ countries_sa |>
   geom_scatterpie(
     data = scatterpie_data,
     mapping = aes(x = lon, y = lat),
-    cols = c("Hybrid", "Not identified", "Pure")
+    cols = c("Hybrid", "Not identified", "Pure"),
+    pie_scale = 2
   ) +
+  scale_fill_manual(name = "Class", values = c("darkgrey", "black", "white")) +
   coord_sf(xlim = c(-80, -25), ylim = c(-40, 25), expand = FALSE) +
   labs(x = NULL, y = NULL) +
   theme_classic() +

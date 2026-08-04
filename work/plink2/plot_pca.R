@@ -35,7 +35,7 @@ pca_plot <- ggplot(
   ylab(paste0("PC2 (", signif(pve$pve[2], 3), "%)")) +
   theme_minimal() +
   scale_fill_manual(
-    name = "Identificação\nmolecular",
+    name = "Molecular\nidentification",
     values = c(
       "darkgrey",
       "#F28E2B",
@@ -45,25 +45,25 @@ pca_plot <- ggplot(
     ),
     na.value = "black",
     labels = c(
-      "Híbrido",
+      "Hybrid",
       "*Ca. caretta*",
       "*Ch. mydas*",
       "*E. imbricata*",
       "*L. olivacea*",
-      "Não identificado"
+      "Not identified"
     )
   ) +
   scale_shape_manual(
-    name = "Identificação\nmolecular",
+    name = "Molecular\nidentification",
     na.value = 3,
     values = c(21, 22, 23, 24, 25),
     labels = c(
-      "Híbrido",
+      "Hybrid",
       "*Ca. caretta*",
       "*Ch. mydas*",
       "*E. imbricata*",
       "*L. olivacea*",
-      "Não identificado"
+      "Not identified"
     )
   ) +
   theme(
@@ -109,7 +109,7 @@ pca_plot_no_cm <- ggplot(
   ylab(paste0("PC2 (", signif(pve$pve[2], 3), "%)")) +
   theme_minimal() +
   scale_fill_manual(
-    name = "Identificação molecular",
+    name = "Molecular\nidentification",
     values = c(
       "darkgrey",
       "#F28E2B",
@@ -118,23 +118,23 @@ pca_plot_no_cm <- ggplot(
     ),
     na.value = "black",
     labels = c(
-      "Híbrido",
+      "Hybrid",
       "*Ca. caretta*",
       "*E. imbricata*",
       "*L. olivacea*",
-      "Não identificado"
+      "Not identified"
     )
   ) +
   scale_shape_manual(
-    name = "Identificação molecular",
+    name = "Molecular\nidentification",
     na.value = 3,
     values = c(21, 23, 24, 25),
     labels = c(
-      "Híbrido",
+      "Hybrid",
       "*Ca. caretta*",
       "*E. imbricata*",
       "*L. olivacea*",
-      "Não identificado"
+      "Not identified"
     )
   ) +
   theme(
@@ -145,7 +145,57 @@ pca_plot_no_cm <- ggplot(
 ggsave("pca_plot_no_cm.pdf", pca_plot_no_cm)
 ggsave("pca_plot_no_cm.png", pca_plot_no_cm)
 
+pca_plot_no_cm_pc3_pc4 <- ggplot(
+  pca_with_meta,
+  aes(PC3, PC4, fill = previous_molecular_id, shape = previous_molecular_id)
+) +
+  geom_point(size = 3) +
+  coord_equal() +
+  xlab(paste0("PC3 (", signif(pve$pve[3], 3), "%)")) +
+  ylab(paste0("PC4 (", signif(pve$pve[4], 3), "%)")) +
+  theme_minimal() +
+  scale_fill_manual(
+    name = "Molecular\nidentification",
+    values = c(
+      "darkgrey",
+      "#F28E2B",
+      "#4E79A7",
+      "#B07AA1"
+    ),
+    na.value = "black",
+    labels = c(
+      "Hybrid",
+      "*Ca. caretta*",
+      "*E. imbricata*",
+      "*L. olivacea*",
+      "Not identified"
+    )
+  ) +
+  scale_shape_manual(
+    name = "Molecular\nidentification",
+    na.value = 3,
+    values = c(21, 23, 24, 25),
+    labels = c(
+      "Hybrid",
+      "*Ca. caretta*",
+      "*E. imbricata*",
+      "*L. olivacea*",
+      "Not identified"
+    )
+  ) +
+  theme(
+    legend.text = element_markdown(),
+    legend.background = element_rect(colour = "black"),
+    legend.position = c(0.25, 0.15)
+  )
+
 library(patchwork)
+
+pca_figure <- (pca_plot_no_cm + pca_plot_no_cm_pc3_pc4) +
+  plot_annotation(tag_levels = "A") +
+  plot_layout(guides = "collect", nrow = 2)
+ggsave("pca_composite.png", pca_figure)
+ggsave("pca_composite.pdf", pca_figure)
 
 pca_figure <- pca_plot +
   pca_plot_no_cm +

@@ -7,6 +7,8 @@ kinship |>
   geom_tile() +
   theme_minimal()
 
-kinship |>
-  filter(KINSHIP >= 0.25) |>
+kinship_filtered <- kinship |>
+  filter(KINSHIP >= 0.25)
+
+kinship_filtered |>
   write_csv("kinship_first_degree.csv")

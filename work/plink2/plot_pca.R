@@ -40,7 +40,7 @@ pca_plot <- ggplot(
       "darkgrey",
       "#F28E2B",
       "#59A14F",
-      "#4E79A7",
+      "#e15759",
       "#B07AA1"
     ),
     na.value = "black",
@@ -113,7 +113,7 @@ pca_plot_no_cm <- ggplot(
     values = c(
       "darkgrey",
       "#F28E2B",
-      "#4E79A7",
+      "#e15759",
       "#B07AA1"
     ),
     na.value = "black",
@@ -159,7 +159,7 @@ pca_plot_no_cm_pc3_pc4 <- ggplot(
     values = c(
       "darkgrey",
       "#F28E2B",
-      "#4E79A7",
+      "#e15759",
       "#B07AA1"
     ),
     na.value = "black",
@@ -185,9 +185,10 @@ pca_plot_no_cm_pc3_pc4 <- ggplot(
   ) +
   theme(
     legend.text = element_markdown(),
-    legend.background = element_rect(colour = "black"),
-    legend.position = c(0.25, 0.15)
+    legend.background = element_rect(colour = "black")
   )
+
+ggsave("pc3_pc4.png", pca_plot_no_cm_pc3_pc4)
 
 library(patchwork)
 

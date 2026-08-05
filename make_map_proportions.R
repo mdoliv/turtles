@@ -24,7 +24,10 @@ sample_meta <- sample_meta |>
 scatterpie_data <- sample_meta |>
   mutate(
     type = case_when(
-      previous_molecular_id %in% c("cc", "ei", "cm", "lo") ~ "Pure",
+      previous_molecular_id == "cc" ~ "*Ca. caretta*",
+      previous_molecular_id == "cm" ~ "*Ch. mydas*",
+      previous_molecular_id == "ei" ~ "*E. imbricata*",
+      previous_molecular_id == "lo" ~ "*L. olivacea*",
       previous_molecular_id == "admixed" ~ "Hybrid",
       .default = "Not identified"
     ),
@@ -39,7 +42,8 @@ scatterpie_data <- sample_meta |>
         "Rio de Janeiro" ~ -22.88,
         "Southeast Atlantic" ~ -30.95,
         "Martinique" ~ 14.83,
-        "São Paulo" ~ -23.95
+        "São Paulo" ~ -23.95,
+        "Guadeloupe" ~ 16.23
       ),
     lon = state |>
       recode_values(
@@ -52,7 +56,8 @@ scatterpie_data <- sample_meta |>
         "Rio de Janeiro" ~ -43.17,
         "Southeast Atlantic" ~ -35.01,
         "Martinique" ~ -61.05,
-        "São Paulo" ~ -46.33
+        "São Paulo" ~ -46.33,
+        "Guadeloupe" ~ -61.57
       )
   ) |>
   group_by(type, lat, lon) |>
@@ -73,7 +78,7 @@ countries_sa <- sf::st_crop(
   ymax = 25
 )
 
-countries_sa |>
+sample_map <- countries_sa |>
   ggplot() +
   tidyterra::geom_spatraster_rgb(data = ne1_crop) +
   geom_sf(fill = NA) +
@@ -81,10 +86,20 @@ countries_sa |>
   geom_scatterpie(
     data = scatterpie_data,
     mapping = aes(x = lon, y = lat),
-    cols = c("Hybrid", "Not identified", "Pure"),
-    pie_scale = 2
+    cols = c(
+      "Hybrid",
+      "Not identified",
+      "*Ca. caretta*",
+      "*Ch. mydas*",
+      "*E. imbricata*",
+      "*L. olivacea*"
+    ),
+    pie_scale = 2.5
   ) +
-  scale_fill_manual(name = "Class", values = c("darkgrey", "black", "white")) +
+  scale_fill_manual(
+    name = "Species",
+    values = c("darkgrey", "black", "#F28E2B", "#59A14F", "#E15759", "#B07AA1")
+  ) +
   coord_sf(xlim = c(-80, -25), ylim = c(-40, 25), expand = FALSE) +
   labs(x = NULL, y = NULL) +
   theme_classic() +

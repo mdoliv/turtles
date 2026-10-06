@@ -53,26 +53,37 @@ full_data <- full_data |>
   left_join(meta, by = c("sample" = "new_id"))
 
 coverage_plot <- full_data |>
+  mutate(
+    previous_molecular_id = case_when(
+      is.na(previous_molecular_id) ~ "Not identified",
+      previous_molecular_id == "admixed" ~ "Hybrid",
+      previous_molecular_id %in% c("cc", "cm", "ei", "lo") ~ str_to_title(
+        previous_molecular_id
+      )
+    )
+  ) |>
   ggplot(aes(
-    x = ref,
+    x = previous_molecular_id,
     y = mean_cov_ns,
-    fill = previous_molecular_id,
-    colour = previous_molecular_id
+    fill = ref,
+    colour = ref
   )) +
   geom_boxplot(alpha = 0.5) +
-  labs(x = "Reference", y = "Mean weighted depth") +
-  scale_fill_manual(
-    name = "Previous molecular\nidentification",
-    labels = c("Hybrid", "Cc", "Cm", "Ei", "Lo", "Non identified"),
-    values = c("darkgrey", "#F28E2B", "#59A14F", "#4E79A7", "#B07AA1"),
-    na.value = "black"
-  ) +
-  scale_colour_manual(
-    name = "Previous molecular\nidentification",
-    labels = c("Hybrid", "Cc", "Cm", "Ei", "Lo", "Non identified"),
-    values = c("darkgrey", "#F28E2B", "#59A14F", "#4E79A7", "#B07AA1"),
-    na.value = "black"
-  ) +
+  labs(x = "Previous molecular identification", y = "Mean weighted depth") +
+  scale_fill_brewer(name = "Reference genome", palette = "Dark2") +
+  scale_colour_brewer(name = "Reference genome", palette = "Dark2") +
+  # scale_fill_manual(
+  #   name = "Previous molecular\nidentification",
+  #   labels = c("Hybrid", "Cc", "Cm", "Ei", "Lo", "Non identified"),
+  #   values = c("darkgrey", "#F28E2B", "#59A14F", "#4E79A7", "#B07AA1"),
+  #   na.value = "black"
+  # ) +
+  # scale_colour_manual(
+  #   name = "Previous molecular\nidentification",
+  #   labels = c("Hybrid", "Cc", "Cm", "Ei", "Lo", "Non identified"),
+  #   values = c("darkgrey", "#F28E2B", "#59A14F", "#4E79A7", "#B07AA1"),
+  #   na.value = "black"
+  # ) +
   theme_bw() +
   theme(panel.grid = element_blank())
 #coverage_plot <- full_data |>
